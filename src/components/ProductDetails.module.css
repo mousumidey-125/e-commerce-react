@@ -1,0 +1,13 @@
+.description{
+    display: flex;
+    width: 800px;
+    margin-left: 20%;
+}
+.images{
+    margin: 5px;
+    display: flex;
+    
+}
+.details{
+    margin:15px ;
+}
