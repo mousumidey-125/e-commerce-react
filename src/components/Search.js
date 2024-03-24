@@ -5,7 +5,7 @@ function Search({onSearch}) {
     const navigate=useNavigate()
     const handleSearch = (e) => {
         onSearch(e.target.value)
-        navigate('/')
+        //navigate('/')
         
     }
     return <div className={styles.serachContainer}>

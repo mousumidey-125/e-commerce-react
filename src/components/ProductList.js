@@ -10,10 +10,11 @@ function ProductList({ products}) {
         
         <div className={styles.products} key={product.id} >
           <Link to={`/product/${product.id}`} >
-          <img src={product.images[0]} style={{ height: '100px' }} alt={product.title} />
+          <img src={product.images[0]} style={{ height: '100px' , width:'150px'}} alt={product.title} />
           </Link>
-          <p>{product.title}</p>
-          <p>{product.description}</p>
+          <p className={styles.title}>{product.title}</p>
+          <p className={styles.description}>{product.description}</p>
+          <p>{product.price}</p>
         </div>
       
       ))}
