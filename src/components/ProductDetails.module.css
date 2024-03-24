@@ -1,13 +1,23 @@
 .description{
     display: flex;
-    width: 800px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    /* width: 800px;
     margin-left: 20%;
+     */
 }
 .images{
     margin: 5px;
     display: flex;
+    align-items: center;
+    width: 40%;
     
 }
 .details{
     margin:15px ;
+    width: 60%;
+}
+.ratings{
+    display: flex;
 }

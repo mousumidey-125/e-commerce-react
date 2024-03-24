@@ -42,10 +42,9 @@ function AddToCart() {
     </div>
 
     <div className={styles.CartAmount}>
-    <p>CartAmaout</p>
-    <p style={{ textAlign: "center", fontSize: "30px" }}>Your Cart</p>
-        <p style={{ textAlign: "center", fontSize: "20px" }}>Total no of Product : {cart.length}</p>
-        <p style={{ textAlign: "center", fontSize: "20px" }}>Total Price: {price}</p>
+    <p style={{fontSize:'30px'}}>Price Details</p>
+        <p style={{fontSize:'20px'}}>Total no of Product : {cart.length}</p>
+        <p style={{fontSize:'20px'}}>Total Price: ₹{price}</p>
 
     </div>
 

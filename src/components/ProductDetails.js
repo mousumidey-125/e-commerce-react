@@ -73,7 +73,7 @@ if (!productDetails) {
                     {images[0].length > 1 ? 
                     <>
                         <span className="material-symbols-outlined" style={{ margin: "auto" }} onClick={() => handlePrevious()}>skip_previous</span>
-                        <img src={img[imageIndex]} alt={productDetails.title} style={{ height: '300px', width: '250px' }} ></img>
+                        <img src={img[imageIndex]} alt={productDetails.title} style={{ height: '200px', width: '250px' }} ></img>
                         <span className="material-symbols-outlined" style={{ margin: "auto" }} onClick={() => handleNext()}>skip_next</span>
                     </> :
                         <img src={img[imageIndex]} alt={productDetails.title} style={{ height: '300px', width: '250px' }} ></img>}
@@ -82,12 +82,14 @@ if (!productDetails) {
             ))}
         </div>
         <div className={styles.details} >
-                     <p>{productDetails.title}</p>
-                     <p>{productDetails.description}</p>
-                     <p>{productDetails.discountPercentage}</p>
-                     <p>{productDetails.price}</p>
-                     <p>{productDetails.rating}</p>
-                     <p>{productDetails.title}</p>
+                     <p style={{fontSize:"30px"}}>{productDetails.title}</p>
+                     <p style={{fontSize:"20px"}}>Description : {productDetails.description}</p>
+                     <p><b>₹{productDetails.price}</b></p>
+                     <div>
+                     <p className={styles.ratings}>{productDetails.rating} <span class="material-symbols-outlined">star</span></p>
+                     </div>
+                    
+                     
                      
                      {(cart.filter((data)=> data.id === productDetails.id).length)===1 ? <button className="btn btn-success" onClick={handleGoToCart}>Go To Cart</button> : <button onClick={handleCart} className="btn btn-danger">Add To Cart</button>}
                      

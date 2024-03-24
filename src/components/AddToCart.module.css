@@ -2,13 +2,15 @@
 .CartContainer{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .CartProduct{
     width: 60%;
     margin: 15px;
 }
 .CartAmount{
-    width: 30%;
+    width: 20%;
+    margin: 5px;
 }
 .cart{
     display: flex;

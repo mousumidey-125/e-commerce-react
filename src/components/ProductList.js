@@ -14,8 +14,9 @@ function ProductList({ products}) {
           <Link to={`/product/${product.id}`} >
           <img src={product.images[0]} style={{ height: '100px' , width:'150px'}} alt={product.title} />
           </Link>
+          <Link to={`/product/${product.id}`} className={styles.link}>
           {product.title.length>20? <p className={styles.title}>{product.title.slice(0, 20) + "..."}</p>:<p className={styles.title}>{product.title}</p>}
-          
+          </Link>
           <Link to={`/product/${product.id}`} className={styles.link}>
          {product.description.length>50? <p className={styles.description}>{product.description.slice(0, 40) + "..."}</p>:<p className={styles.description}>{product.description}</p>}
          </Link>
