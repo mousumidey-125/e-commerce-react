@@ -15,30 +15,45 @@ function AddToCart() {
       }, [cart]);
       
     return <>
-        <div className={styles.CartContainer}>
-            <p style={{ textAlign: "center", fontSize: "30px" }}>Your Cart</p>
-            <p style={{ textAlign: "center", fontSize: "20px" }}>Total no of Product : {cart.length}</p>
-            <p style={{ textAlign: "center", fontSize: "20px" }}>Total Price: {price}</p>
-            {cart.map((item) => (
-                <React.Fragment key={item.id}>
-                    <div className={styles.cart}>
-                        <div>
-                            <img src={item.images[0]} style={{ height: '250px', width: '250px', objectFit: 'contain' }}></img>
-                        </div>
-                        <div>
-                            <p >{item.title}</p>
-                            <p>{item.description}</p>
-                            <p>{item.discountPercentage}</p>
-                            <p>{item.price}</p>
-                            <p>{item.rating}</p>
-                            <p>{item.title}</p>
-                            <button className="btn btn-danger" onClick={() => handleDelete(item.id)}>Delete</button>
-                        </div>
-                    </div>
-                </React.Fragment>
+    {cart.length== 0 ? <p></p> :
+    <div className={styles.CartContainer}>
 
-            ))}
-        </div>
+        
+        
+    <div className={styles.CartProduct}>
+        {cart.map((item)=>
+       <React.Fragment key={item.id}>
+       <div className={styles.cart}>
+           <div className={styles.image}>
+               <img src={item.images[0]} style={{ height: '150px', width: '250px', objectFit: 'contain' }}></img>
+           </div>
+           <div className={styles.details}>
+               <p >{item.title}</p>
+               <p>{item.description}</p>
+               <p>{item.price}</p>
+               <button className={`btn btn-success ${styles.buy}` } >Buy Now</button>
+               <button className="btn btn-danger" onClick={() => handleDelete(item.id)}>Delete</button>
+           </div>
+       </div>
+   </React.Fragment>
+        )}
+    
+        
+    </div>
+
+    <div className={styles.CartAmount}>
+    <p>CartAmaout</p>
+    <p style={{ textAlign: "center", fontSize: "30px" }}>Your Cart</p>
+        <p style={{ textAlign: "center", fontSize: "20px" }}>Total no of Product : {cart.length}</p>
+        <p style={{ textAlign: "center", fontSize: "20px" }}>Total Price: {price}</p>
+
+    </div>
+
+
+</div>
+        }
+    
+        
     </>
 
 }

@@ -1,0 +1,12 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    justify-content: center;
+    
+}
+.searchBar{
+    width: 70%;
+    margin: 15px;
+}
+

@@ -1,9 +1,26 @@
 
+.CartContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.CartProduct{
+    width: 60%;
+    margin: 15px;
+}
+.CartAmount{
+    width: 30%;
+}
 .cart{
     display: flex;
-    margin: 20px 300px;
-    border: 1px solid gray;
-    padding: 10px;
-    /* height: 300px; */
-    width: 900px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.image{
+    width: 30%;
+}
+.details{
+    width: 70%;
+}
+.buy{
+    margin-right: 10px;
 }

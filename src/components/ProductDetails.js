@@ -54,7 +54,7 @@ function ProductDetails() {
 
     const handleCart = () => { 
        setCart([...cart,productDetails])
-        navigate('/cart')
+        
       
     }
    
