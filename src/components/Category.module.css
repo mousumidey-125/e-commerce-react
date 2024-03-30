@@ -10,7 +10,14 @@
     text-decoration: none;
     color: black;
 }
+li{
+    font-size: 20px;
+    font-weight: bold;
+}
 li:hover{
-    color:blue;
+    color:red;
     
+}
+.active{
+    color: red;
 }

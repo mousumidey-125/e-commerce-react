@@ -25,7 +25,7 @@ function App() {
       .then(res => res.json())
       .then((data) => {
         setProducts(data.products)
-        console.log(data.products)
+        //console.log(data.products)
       })
   }, [])
   useEffect(()=>{
@@ -58,7 +58,8 @@ function App() {
     setSearchData(data)
   }
   const filteredProducts = searchData === "" ? products : products.filter((p) => p.title.toLowerCase().includes(searchData.toLowerCase()))
-
+// console.log(filteredProducts)
+console.log(products)
   const { cart } = useCart()
   const isCartPage = location.pathname === '/cart';
   return (
